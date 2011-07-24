@@ -1,0 +1,39 @@
+{% if 10 == 10 %}
+    hi
+{% else %}
+    bye
+{% end if %}
+
+{% for i in range(0, 10) %}
+    {{i}} {{i | title}}
+    
+    {% if 1 %}
+        {% if 2 %}
+            {% if 3 %}{% slurp %}
+                {{i}}
+            {% end if %}
+        {% end if %}
+    {% else %}
+        booya
+    {% end if %}
+{% end for %}
+
+{% for i in range(0, 10) %}{{i}}{% end for %}
+
+
+{% form(action='/admin/foo', 
+        method='POST') %}
+    <input type='textfield'>
+    <input type='button'>
+{% end form %}
+
+{% easy_box %}My Text{% end easy_box %}
+
+{% partial templates/render_me.html %}
+
+{% block test %}
+    this is a test.
+
+{% end block %}
+
+{% render_block foo %}

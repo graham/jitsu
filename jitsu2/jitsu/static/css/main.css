@@ -1,0 +1,133 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    text-align: left; 
+    text-shadow: 0 0 0 #000;
+}
+
+a { text-decoration: none; font-weight: bold; }
+a:hover { text-decoration: underline; }
+
+.title { font-size: 150%; text-align: center; font-weight: bold; }
+.subtitle {
+    padding-left: 15px;
+    font-size: 130%;
+}
+
+.content {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#main_content { }
+#side_menu { }
+#dashboard {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    
+    background-color: rgb(65, 118, 144);
+    height: 2.8em;
+    color: rgb(244, 243, 121);
+    font-weight: normal;
+    font-family: sans-serif;
+    border: 0px;
+    border-bottom: 1px solid #555;
+}
+
+#dashboard .dash_title {
+    font-size: 170%;
+    position: absolute;
+    text-align:left;
+    top: 6px;
+    left: 10px;
+}
+
+#dashboard .dash_info {
+    position: absolute;
+    text-align:right;
+    font-size: 88%;
+    color: white;
+    top: 6px;
+    right: 10px;
+}
+
+#dashboard a {
+    color: white;
+}
+
+#bumper {
+    font-size: 88%;
+    padding: 0px;
+    padding-top: 2px;
+    padding-right: 12px;
+    text-align: right;
+    height: 1.4em;
+    color: #222;
+    background-color: rgb(222, 222, 222);
+    border: 0px solid black;
+    border-bottom: 1px solid #444;
+    margin-bottom: 5px;
+}
+
+#bumper a {
+    color: #222;
+}
+
+#bumper_menu {
+    padding: 0px;
+    padding-top: 1px;
+    margin:0px;
+    position:absolute;
+    text-align:left;
+    left: 10px;
+}
+
+#side_menu ul.menu > li {
+    list-style-type: none;
+    padding-left: 5px;
+    width: 100%;
+    background-color: grey;
+}
+
+#side_menu ul.menu.li {
+    width: 100%;
+}
+
+#side_menu ul.menu > li a:hover {
+    background-color: white;
+}
+
+table {
+    border: 0px;
+}
+
+table thead tr th, table thead tr td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-weight: bold;
+    color: #111;
+    background-image: url(http://localhost:8000/media/img/admin/default-bg.gif);
+    border: 1px solid grey;
+}
+
+table tbody tr td {
+    padding-left: 2px;
+    padding-top: 1px;
+    border: 1px solid grey;
+}
+
+table.grey_table thead tr th, table.grey_table thead tr td {
+    background-image: url(http://localhost/images/gradient.jpg);
+}
+
+ul {
+    
+}
+
+ol {
+    padding-left: 10px;
+}
+

@@ -1,0 +1,45 @@
+<html>
+ <head>
+  <script type="application/x-javascript">
+        function d2h(d) {
+            x = d.toString(16);
+            if ((x.length) == 1) {
+                x = '0' + x;
+            }
+            return x
+        }  
+  
+        function draw() {
+          var canvas = document.getElementById("canvas");
+          var ctx = canvas.getContext("2d");
+
+          ctx.fillStyle = "#2f232f";
+
+          ctx.beginPath();
+          for( var i=0; i <= 255; i++) {
+              for( var j=0; j <= 255; j++) {
+                  ctx.fillStyle = "#ff" + d2h(i) + "" +d2h(j);
+                  ctx.fillRect(i, j, i+2, j+2);
+              }
+          }
+          
+          
+          x = canvas.toDataURL();
+          var woot = document.getElementById('woot');
+          woot.src = x;
+          alert("Done");
+          // ctx.moveTo(30, 30);
+          // ctx.lineTo(150, 150);
+          // // was: ctx.quadraticCurveTo(60, 70, 70, 150); which is wrong.
+          // ctx.bezierCurveTo(60, 70, 60, 70, 70, 150); // <- this is right formula for the image on the right ->
+          // ctx.lineTo(30, 30);
+          // ctx.fill();
+        }
+   </script>
+ </head>
+ <body onload="draw()">
+   <canvas id="canvas" width="300" height="300"></canvas>
+   
+   <img id='woot'>
+ </body>
+</html>

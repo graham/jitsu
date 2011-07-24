@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script type="text/javascript" src="../js/jquery-1.2.6.min.js"></script>
+        <script type="text/javascript" src="gpb.js"></script>
+        <script type="text/javascript">
+            $(document).ready( function() {
+                var x = $("#pb1").progressBar(0);
+                update('items');
+            });
+            
+            function update(list_id) {
+                count = 0.0;
+                checked = 0.0;
+                $('#' + list_id + ">li>input").each( 
+                    function(index, item) { 
+                        count += 1;
+                        if (item.checked) {
+                            checked += 1;
+                        }
+                    }
+                );
+                
+                $("#pb1").progressBar((checked/count) * 100);
+            }
+        </script>
+        
+        <style type='text/css'>
+            .progress_bar {
+                padding: 0px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div style='font-size: 20px'>Progress Bar</div>
+        <div class='progress_bar' id='pb1'></div>
+        <ul id='items'>
+            <li><input onchange="update('items');" type=checkbox checked>Django Admin Interface</li>
+            <li><input onchange="update('items');" type=checkbox checked>Custom Django Admin Template</li>
+            <li><input onchange="update('items');" type=checkbox>Flex App</li>
+            <li><input onchange="update('items');" type=checkbox>Color Bin Abstract</li>
+            <li><input onchange="update('items');" type=checkbox>Quick View</li>
+            <li><input onchange="update('items');" type=checkbox checked>Info XML Load</li>
+            <li><input onchange="update('items');" type=checkbox checked>Custom Images</li>
+            <li><input onchange="update('items');" type=checkbox>Background Recalc</li>
+            <li><input onchange="update('items');" type=checkbox checked>Date Selection</li>
+        </ul>
+    </body>
+</html>
